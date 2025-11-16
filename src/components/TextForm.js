@@ -6,6 +6,15 @@ let newText=text.toUpperCase();
 setText(newText)
 
     }
+   const handleCapCharClick = () => {
+  let newText = text
+    .split(" ")
+    .map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    )
+    .join(" ");
+  setText(newText);
+};
       const handleloClick=()=>{
 let newText=text.toLowerCase();
 setText(newText)
@@ -26,6 +35,7 @@ setText(event.target.value);
 </div>
 <button className="btn btn-primary my-2" onClick={handleUpClick}>Convert to upperCase</button>
 <button className="btn btn-primary my-2 mx-2" onClick={handleloClick}>Convert to lowerCase</button>
+<button className="btn btn-primary my-2 mx-2" onClick={handleCapCharClick}>Capitalize first letter of every word</button>
 
     </div>
     <div className="container my-3" >
