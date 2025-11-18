@@ -16,7 +16,7 @@ type:type
 })
 setTimeout(() => {
   setAlert(null)
-},1200);
+},1000);
 }
 
 
