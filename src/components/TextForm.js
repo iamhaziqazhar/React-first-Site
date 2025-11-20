@@ -45,6 +45,7 @@ setText(event.target.value);
       <h3>Your text Summary</h3>
             <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
     <h2>Preview</h2>
+    
     <p>{text.length>0?text:'Enter Your text in the text box above to preview'}</p>
     </div>
     </>
