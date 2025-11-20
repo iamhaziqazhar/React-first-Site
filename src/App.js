@@ -20,7 +20,7 @@ setTimeout(() => {
 }
 
 
-   const toggleMode=()=>{
+   const toggleMode1=()=>{
 if(mode==="light"){
   setMode("dark")
    document.body.style.backgroundColor='#000000db'
@@ -30,13 +30,34 @@ if(mode==="light"){
       showAlert("Light Mode has been enabled" , "success")
 
 
-}
+}}
+ const toggleMode2=()=>{
+if(mode==="light"){
+  setMode("blue")
+   document.body.style.backgroundColor='#01a6ffdb'
+   showAlert("Blue Mode has been enabled" , "success")
+} else{setMode("light")
+   document.body.style.backgroundColor='light'
+      showAlert("Light Mode has been enabled" , "success")
 
+
+}}
+ const toggleMode=()=>{
+if(mode==="light"){
+  setMode("red")
+   document.body.style.backgroundColor='#9f1b1bb3'
+   showAlert("red Mode has been enabled" , "success")
+} else{setMode("light")
+   document.body.style.backgroundColor='white'
+      showAlert("Light Mode has been enabled" , "success")
+
+
+}
 
   }
   return (
     <>
-<Navbar title="textutils" about="About" mode={mode} toggleMode={toggleMode}/>
+<Navbar title="textutils" about="About" mode={mode} toggleMode1={toggleMode1} toggleMode2={toggleMode2} toggleMode3={toggleMode} />
 <Alert alert={alert}/>   
 <div className="container my-5"><TextForm showAlert={showAlert} heading= "Please Enter your text here to Analyze:" mode={mode} /></div>
 {/* <About/> */}

@@ -25,8 +25,12 @@ export default function Navbar(props) {
         <button className="btn btn-outline-warning" type="submit">Search</button> */}
         <div className={`form-checkform-switch text-${props.mode==='light'?'dark':'light'}`}>
 
-  <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="switchCheckDefault"/>
-  <label className="form-check-label" htmlFor="switchCheckDefault " >Enable Dark Mode</label>
+  <input className="form-check-input" onClick={props.toggleMode1} type="checkbox" role="switch" id="switchCheckDefault"/>
+  <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Dark Mode</label>
+   <input className="form-check-input" onClick={props.toggleMode2} type="checkbox" role="switch" id="switchCheckDefault"/>
+  <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Blue Mode</label>
+   <input className="form-check-input" onClick={props.toggleMode3} type="checkbox" role="switch" id="switchCheckDefault"/>
+  <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Red Mode</label>
 </div>
       </form>
     </div>
