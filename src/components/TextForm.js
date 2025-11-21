@@ -32,13 +32,13 @@ setText(event.target.value);
   return (
     <>
     <div className='container' style={{color:props.mode==='dark'?'white':'black'}}>
-        <h5>{props.heading}  </h5>
-<div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
-  <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'grey':'white' , color:props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>
+        <h5 className='mx-4'><strong>{props.heading}</strong>  </h5>
+<div className="container" style={{color:props.mode==='dark'?'#6d4d4d9c':'black'}}>
+  <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'black':'#b7a8a802' , color:props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>
 </div>
-<button className="btn btn-primary my-2" onClick={handleUpClick}>Convert to upperCase</button>
-<button className="btn btn-primary my-2 mx-2" onClick={handleloClick}>Convert to lowerCase</button>
-<button className="btn btn-primary my-2 mx-2" onClick={handleCapCharClick}>Capitalize first letter of every word</button>
+<button disabled={text.length===0} className="btn btn-secondary my-2 mx-2" onClick={handleUpClick}>Convert to upperCase</button>
+<button disabled={text.length===0} className="btn btn-secondary my-2 mx-2" onClick={handleloClick}>Convert to lowerCase</button>
+<button disabled={text.length===0} className="btn btn-secondary my-2 mx-2" onClick={handleCapCharClick}>Capitalize first letter of every word</button>
 
     </div>
     <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}} >

@@ -12,7 +12,7 @@ export default function Navbar(props) {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul className="navbar-nav me-auto mb- mb-lg-0">
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/About">{props.about}</Link>
         </li>
@@ -27,10 +27,7 @@ export default function Navbar(props) {
 
   <input className="form-check-input" onClick={props.toggleMode1} type="checkbox" role="switch" id="switchCheckDefault"/>
   <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Dark Mode</label>
-   <input className="form-check-input" onClick={props.toggleMode2} type="checkbox" role="switch" id="switchCheckDefault"/>
-  <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Blue Mode</label>
-   <input className="form-check-input" onClick={props.toggleMode3} type="checkbox" role="switch" id="switchCheckDefault"/>
-  <label className="form-check-label mx-2" htmlFor="switchCheckDefault " >Enable Red Mode</label>
+
 </div>
       </form>
     </div>

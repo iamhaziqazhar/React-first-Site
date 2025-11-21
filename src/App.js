@@ -9,6 +9,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
+if (document.body.style.backgroundColor === "") {
+    document.body.style.backgroundColor = "#00000064";
+  }
+
+
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
@@ -19,42 +24,20 @@ function App() {
     }, 1000);
   };
 
+  
   const toggleMode1 = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "#000000db";
+      document.body.style.backgroundColor = "#000000ef";
       showAlert("Dark Mode has been enabled", "success");
       document.title = "Textutils-Dark mode Enabled";
     } else {
       setMode("light");
-      document.body.style.backgroundColor = "white";
+      document.body.style.backgroundColor = "#6d4d4d9c";
       showAlert("Light Mode has been enabled", "success");
     }
   };
-  const toggleMode2 = () => {
-    if (mode === "light") {
-      setMode("blue");
-      document.body.style.backgroundColor = "#01a6ffdb";
-      showAlert("Blue Mode has been enabled", "success");
-      document.title = "Textutils-Blue mode Enabled";
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light Mode has been enabled", "success");
-    }
-  };
-  const toggleMode = () => {
-    if (mode === "light") {
-      setMode("red");
-      document.body.style.backgroundColor = "#9f1b1bb3";
-      showAlert("red Mode has been enabled", "success");
-      document.title = "Textutils-Red mode Enabled";
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light Mode has been enabled", "success");
-    }
-  };
+
   return (
     <BrowserRouter>
       <Navbar
@@ -62,8 +45,7 @@ function App() {
         about="About"
         mode={mode}
         toggleMode1={toggleMode1}
-        toggleMode2={toggleMode2}
-        toggleMode3={toggleMode}
+    
       />
 
       <Alert alert={alert} />
@@ -80,7 +62,7 @@ function App() {
               />
             }
           />
-          <Route exact path="/About" element={<About />} />
+          <Route exact path="/About" element={<About mode={mode} />} />
         </Routes>
       </div>
     </BrowserRouter>
