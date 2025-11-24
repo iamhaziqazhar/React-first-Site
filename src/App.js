@@ -10,7 +10,7 @@ function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
 if (document.body.style.backgroundColor === "") {
-    document.body.style.backgroundColor = "#00000064";
+    document.body.style.backgroundColor = "#6d4d4d9c";
   }
 
 

@@ -35,7 +35,7 @@ borderColor:props.mode==="dark"?"#fffffff1":"#fbfdfdff",
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-item" style={myStyle}>
+            <div className="accordion-body" style={myStyle}>
               Textutils gives you a way to analyze your text quickly and
               efficiently. Be it word count, character count or other
               Operations.
