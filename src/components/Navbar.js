@@ -14,13 +14,12 @@ export default function Navbar(props) {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb- mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/About">{props.about}</Link>
+          <Link className="nav-link" aria-current="page" to="/About">{props.about}</Link>
         </li>
        
       </ul>
       <form className="d-flex" role="search">
-        {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-warning" type="submit">Search</button> */}
+      
         <div className={`form-checkform-switch text-${props.mode==='light'?'dark':'light'}`}>
 
   <input className="form-check-input" onClick={props.toggleMode1} type="checkbox" role="switch" id="switchCheckDefault"/>
